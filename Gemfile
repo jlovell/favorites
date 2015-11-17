@@ -12,6 +12,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
+gem 'haml'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -32,3 +33,6 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'database_cleaner'
+end

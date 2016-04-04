@@ -1,1 +1,6 @@
-= @restaurants.inspect
+.container
+  .list-group
+    - @restaurants.each do |restaurant|
+      = link_to restaurant_path(restaurant[:id]), class: "list-group-item", style: "display: block;" do
+        = restaurant[:name]
+        %span.badge= restaurant[:dish_count]

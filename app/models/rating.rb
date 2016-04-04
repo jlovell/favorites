@@ -1,10 +1,10 @@
 class Rating < ActiveRecord::Base
   belongs_to :user
-  belongs_to :item
-  validates :item, presence: true
+  belongs_to :dish
+  validates :dish, presence: true
 
   scope :for_restaurant, -> (restaurant) {
-    where(item_id: restaurant.items.select(:id))
+    where(dish_id: restaurant.dishes.select(:id))
   }
 
   def self.calculate_average

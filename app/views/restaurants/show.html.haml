@@ -1,0 +1,14 @@
+.container
+  %h2{ style: "display: inline-block;" }= @restaurant[:name]
+  = link_to new_dish_path(restaurant_id: @restaurant[:id]), class: "btn btn-primary mdb-btn-fab pull-right" do
+    .material-icons add
+  %table.table.table-striped.table-hover
+    %thead
+      %tr
+        %th Dish
+        %th Rating
+    %tbody
+      - @dishes.each do |dish|
+        %tr
+          %td= dish[:name]
+          %td= dish[:rating]

@@ -1,0 +1,42 @@
+.container
+  %h2
+    New Dish for
+    = @restaurant[:name]
+  = form_for @restaurant.dishes.new do |f|
+    = f.hidden_field :category_id
+    = f.hidden_field :category_type
+    .form-group
+      %input#dish_name.form-control{:placeholder => "Dish Name", :name => "dish[name]"}
+    .form-group
+      %label.emoji-labels
+        %input{ type: "radio", name: "dish[ratings][value]", value: "1" }
+        %span &#xe407;
+      %label.emoji-labels
+        %input{ type: "radio", name: "dish[ratings][value]", value: "2" }
+        %span &#xe406;
+      %label.emoji-labels
+        %input{ type: "radio", name: "dish[ratings][value]", value: "3" }
+        %span &#x1f615;
+      %label.emoji-labels
+        %input{ type: "radio", name: "dish[ratings][value]", value: "4" }
+        %span &#xe402;
+      %label.emoji-labels
+        %input{ type: "radio", name: "dish[ratings][value]", value: "5" }
+        %span &#x1f60b;
+      %label.emoji-labels
+        %input{ type: "radio", name: "dish[ratings][value]", value: "6" }
+        %span &#xe106;
+    = f.submit "Submit", class: "btn btn-primary"
+
+:css
+  .emoji-labels {
+    font-size: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .emoji-labels input[type=radio] {
+    visibility: hidden;
+  }
+  .emoji-labels input[type=radio]:checked + span {
+    border-bottom: 2px solid red;
+  }

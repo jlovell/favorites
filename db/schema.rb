@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151117031453) do
+ActiveRecord::Schema.define(version: 20160404030350) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "items", force: :cascade do |t|
+  create_table "dishes", force: :cascade do |t|
     t.string   "name"
     t.integer  "category_id"
     t.string   "category_type"
@@ -24,17 +24,17 @@ ActiveRecord::Schema.define(version: 20151117031453) do
     t.datetime "updated_at",    null: false
   end
 
-  add_index "items", ["category_type", "category_id"], name: "index_items_on_category_type_and_category_id", using: :btree
+  add_index "dishes", ["category_type", "category_id"], name: "index_dishes_on_category_type_and_category_id", using: :btree
 
   create_table "ratings", force: :cascade do |t|
     t.integer  "value"
     t.integer  "user_id"
-    t.integer  "item_id"
+    t.integer  "dish_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "ratings", ["item_id"], name: "index_ratings_on_item_id", using: :btree
+  add_index "ratings", ["dish_id"], name: "index_ratings_on_dish_id", using: :btree
   add_index "ratings", ["user_id"], name: "index_ratings_on_user_id", using: :btree
 
   create_table "restaurants", force: :cascade do |t|
@@ -61,6 +61,6 @@ ActiveRecord::Schema.define(version: 20151117031453) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  add_foreign_key "ratings", "items"
+  add_foreign_key "ratings", "dishes"
   add_foreign_key "ratings", "users"
 end

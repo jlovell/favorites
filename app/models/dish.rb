@@ -1,5 +1,7 @@
-class Item < ActiveRecord::Base
+class Dish < ActiveRecord::Base
   belongs_to :category, polymorphic: true
   validates :category, presence: true
   has_many :ratings
+
+  accepts_nested_attributes_for :ratings
 end

@@ -9,21 +9,21 @@ RSpec.describe Restaurant, type: :model do
       it { is_expected.to be nil }
     end
 
-    context 'with one rating on one item' do
-      let!(:item) { restaurant.items.create! }
-      before { item.ratings.create!(value: 5) }
+    context 'with one rating on one dish' do
+      let!(:dish) { restaurant.dishes.create! }
+      before { dish.ratings.create!(value: 5) }
 
       it 'equals the one rating' do
         expect(subject).to eq 5
       end
     end
 
-    context 'with many ratings on one item' do
-      let!(:item) { restaurant.items.create! }
+    context 'with many ratings on one dish' do
+      let!(:dish) { restaurant.dishes.create! }
 
       before do
-        item.ratings.create!(value: 5)
-        item.ratings.create!(value: 4)
+        dish.ratings.create!(value: 5)
+        dish.ratings.create!(value: 4)
       end
 
       it 'equals the average of the ratings' do
@@ -31,14 +31,14 @@ RSpec.describe Restaurant, type: :model do
       end
     end
 
-    context 'with many ratings on many items' do
-      let!(:item_1) { restaurant.items.create! }
-      let!(:item_2) { restaurant.items.create! }
+    context 'with many ratings on many dishes' do
+      let!(:dish_1) { restaurant.dishes.create! }
+      let!(:dish_2) { restaurant.dishes.create! }
 
       before do
-        item_1.ratings.create!(value: 6)
-        item_2.ratings.create!(value: 3)
-        item_2.ratings.create!(value: 6)
+        dish_1.ratings.create!(value: 6)
+        dish_2.ratings.create!(value: 3)
+        dish_2.ratings.create!(value: 6)
       end
 
       it 'equals the average of all ratings' do

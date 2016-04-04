@@ -1,7 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+data = YAML.load_file("etc/seeds.yml")
+
+data.each do |restaurant_data|
+  rest = Restaurant.where(name: restaurant_data[:restaurant]).first_or_create!
+  restaurant_data[:dishes].each do |dish_data|
+    dish = rest.dishes.where(name: dish_data[:name]).first_or_create!
+    dish.ratings.where(value: dish_data[:rating]).first_or_create!
+  end
+end

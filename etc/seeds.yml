@@ -1,0 +1,35 @@
+---
+- :restaurant: Duck Duck Goat
+  :dishes:
+  - :name: Shrimp Toast
+    :rating: 4
+  - :name: Crab Rangoon
+    :rating: 6
+  - :name: Fermented Vegetables
+    :rating: 3
+  - :name: Slap Noodles
+    :rating: 5
+  - :name: Frog Legs
+    :rating: 2
+  - :name: Duck Fried Rice
+    :rating: 5
+  - :name: Chongqing Chicken
+    :rating: 5
+
+- :restaurant: Perennial Virant
+  :dishes:
+  - :name: Omelette
+    :rating: 5
+  - :name: Biscuits and Gravy
+    :rating: 3
+
+- :restaurant: Que Rico
+  :dishes:
+  - :name: Steak and Chicken Fajitas
+    :rating: 5
+  - :name: Pork Mole
+    :rating: 4
+  - :name: Guacamole
+    :rating: 4
+  - :name: Margaritas Bomber
+    :rating: 5

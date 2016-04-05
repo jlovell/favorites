@@ -1,7 +1,7 @@
 class Rating < ActiveRecord::Base
   belongs_to :user
   belongs_to :dish
-  validates :dish, presence: true
+  # validates :dish, presence: true
 
   scope :for_restaurant, -> (restaurant) {
     where(dish_id: restaurant.dishes.select(:id))

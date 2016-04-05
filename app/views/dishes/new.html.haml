@@ -1,39 +1,50 @@
-.container
-  %h2
-    New Dish for
-    = @restaurant[:name]
-  = form_for @restaurant.dishes.new do |f|
-    = f.hidden_field :category_id
-    = f.hidden_field :category_type
-    .form-group
-      %input#dish_name.form-control{:placeholder => "Dish Name", :name => "dish[name]"}
-    .form-group
-      %label.emoji-labels
-        %input{ type: "radio", name: "dish[ratings][value]", value: "1" }
-        %span &#xe407;
-      %label.emoji-labels
-        %input{ type: "radio", name: "dish[ratings][value]", value: "2" }
-        %span &#xe406;
-      %label.emoji-labels
-        %input{ type: "radio", name: "dish[ratings][value]", value: "3" }
-        %span &#x1f615;
-      %label.emoji-labels
-        %input{ type: "radio", name: "dish[ratings][value]", value: "4" }
-        %span &#xe402;
-      %label.emoji-labels
-        %input{ type: "radio", name: "dish[ratings][value]", value: "5" }
-        %span &#x1f60b;
-      %label.emoji-labels
-        %input{ type: "radio", name: "dish[ratings][value]", value: "6" }
-        %span &#xe106;
-    = f.submit "Submit", class: "btn btn-primary"
+%h2
+  New Dish for
+  = @restaurant[:name]
+= form_for @dish do |f|
+  = f.hidden_field :category_id
+  = f.hidden_field :category_type
+  .form-group
+    %input#dish_name.form-control{:placeholder => "Dish Name", :name => "dish[name]"}
+  .form-group
+    = f.fields_for :ratings do |ff|
+      .flex-grid
+        .flex-grid-cell
+          %label.emoji-labels
+            = ff.radio_button :value, "1"
+            %span= EmojiHelper.image_for_rating 1
+        .flex-grid-cell
+          %label.emoji-labels
+            = ff.radio_button :value, "2"
+            %span= EmojiHelper.image_for_rating 2
+        .flex-grid-cell
+          %label.emoji-labels
+            = ff.radio_button :value, "3"
+            %span= EmojiHelper.image_for_rating 3
+        .flex-grid-cell
+          %label.emoji-labels
+            = ff.radio_button :value, "4"
+            %span= EmojiHelper.image_for_rating 4
+        .flex-grid-cell
+          %label.emoji-labels
+            = ff.radio_button :value, "5"
+            %span= EmojiHelper.image_for_rating 5
+        .flex-grid-cell
+          %label.emoji-labels
+            = ff.radio_button :value, "6"
+            %span= EmojiHelper.image_for_rating 6
+  = f.submit "Submit", class: "btn btn-raised btn-primary btn-block"
 
 :css
-  .emoji-labels {
-    font-size: 100%;
-    padding-left: 5px;
-    padding-right: 5px;
+  .flex-grid {
+    text-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
   }
+  .flex-grid-cell { flex: 1 }
   .emoji-labels input[type=radio] {
     visibility: hidden;
   }

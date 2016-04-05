@@ -8,4 +8,4 @@ class CreateDishes < ActiveRecord::Migration
     end
   end
 end
-db/migrate/20151117031403_create_dishes.rb
+

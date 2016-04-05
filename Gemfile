@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.2'
 
 
 gem 'rails', '4.2.4'
@@ -13,6 +14,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'haml'
+
+gem 'gemoji'
+
+gem 'rails_12factor', group: :production
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -36,3 +41,4 @@ end
 group :test do
   gem 'database_cleaner'
 end
+

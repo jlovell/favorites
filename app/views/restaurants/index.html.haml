@@ -1,6 +1,8 @@
-.container
-  .list-group
-    - @restaurants.each do |restaurant|
-      = link_to restaurant_path(restaurant[:id]), class: "list-group-item", style: "display: block;" do
-        = restaurant[:name]
-        %span.badge= restaurant[:dish_count]
+.list-group
+  - @restaurants.each do |restaurant|
+    = link_to restaurant_path(restaurant[:id]), class: "list-group-item", style: "" do
+      .row-content
+        .list-group-item-heading= restaurant[:name]
+        .list-group-item-text 334 W Fulton Market
+        %span.badge.action-secondary= restaurant[:dish_count]
+    .list-group-separator

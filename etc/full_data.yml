@@ -1,0 +1,612 @@
+- :restaurant: Homeslice
+  :dishes:
+  - :name: Sesame Soy Salad
+    :rating: 5
+  - :name: Bennett's Beauty
+    :rating: 5
+  - :name: Raspberry Vinaigrette Salad
+    :rating: 4
+  - :name: BBQ Bird
+    :rating: 4
+  - :name: Special K
+    :rating: 4
+  - :name: Mercenary
+    :rating: 4
+  - :name: Jalapeño Poppers
+    :rating: 4
+  - :name: Big Teve
+    :rating: 3
+  - :name: Kern-Holio
+    :rating: 3
+  - :name: Miller White
+    :rating: 2
+  - :name: Bourbon Sangria
+    :rating: 1
+
+- :restaurant: Nando's
+  :dishes:
+  - :name: Country Salad
+    :rating: 6
+  - :name: Hummus Plate
+    :rating: 6
+  - :name: Nandoca's choice
+    :rating: 6
+  - :name: Butternut Squash
+    :rating: 6
+  - :name: Chicken Breast Wrap
+    :rating: 6
+  - :name: Fries w Peri Peri Mayo
+    :rating: 6
+  - :name: Corn on the cob
+    :rating: 5
+  - :name: Butternut and Couscous salad
+    :rating: 4
+  - :name: Cucumber salad
+    :rating: 3
+
+- :restaurant: Girl & The Goat
+  :dishes:
+  - :name: Pig face
+    :rating: 6
+  - :name: Shishito peppers
+    :rating: 6
+  - :name: Pork shank
+    :rating: 6
+  - :name: Corn pierogis
+    :rating: 5
+  - :name: Beet salad
+    :rating: 5
+  - :name: Kohlrabi salad
+    :rating: 4
+  - :name: Halibut good but small
+    :rating: 4
+  - :name: Goat belly
+    :rating: 3
+  - :name: Hamachi crudo
+    :rating: 2
+
+- :restaurant: Mercadito
+  :dishes:
+  - :name: Mahi mahi tacos
+    :rating: 6
+  - :name: Al pastor tacos
+    :rating: 4
+    # Austin 6
+
+- :restaurant: Las Fuentes
+  :dishes:
+  - :name: Two fish tacos and skirt steak
+    :rating: 5
+
+- :restaurant: Nomi
+  :dishes:
+  - :name: Otto's Constant Dream
+    :rating: 6
+  - :name: Salmon avocado maki
+    :rating: 5
+
+- :restaurant: Avec
+  :dishes:
+  - :name: Chicken liver pate (+ bread)
+    :rating: 6
+  - :name: Pork shoulder
+    :rating: 6
+  - :name: Chorizo stuff dates
+    :rating: 5
+  - :name: Tabbouleh
+    :rating: 4
+  - :name: Burrata
+    :rating: 3
+  # Duck Pasta*** (try!)
+
+- :restaurant: Cindy's
+  :dishes:
+  - :name: Hamachi Crudo
+    :rating: 6
+  - :name: Indiana Corn
+    :rating: 6
+  - :name: Chicken
+    :rating: 4
+  - :name: Asparagus
+    :rating: 5
+  - :name: Meatballs
+    :rating: 4
+  - :name: Quinoa
+    :rating: 4
+
+  # Brunch:
+  - :name: Yogurt Parfait
+    :rating: 5
+  - :name: Brunch Burger
+    :rating: 3
+
+  - :name: Watermelon Margarita (drink)
+    :rating: 5
+  - :name: We'll Always Have Paris (drink)
+    :rating: 5
+
+- :restaurant: CAA Game Room
+  :dishes:
+  - :name: The Frozen
+    :rating: 6
+  - :name: Sour drink
+    :rating: 3
+
+- :restaurant: Parlor
+  :dishes:
+  - :name: Kale & Artichoke Dip
+    :rating: 5
+  - :name: Roasted Beet Salad
+    :rating: 2
+
+- :restaurant: Little Bad Wolf
+  :dishes:
+  - :name: Pork bao
+    :rating: 5
+  - :name: Shrimp taco
+    :rating: 5
+  - :name: Mussels
+    :rating: 5
+  - :name: Shrimp bao
+    :rating: 4
+  - :name: Steak taco
+    :rating: 2
+
+- :restaurant: Bourgeois Pig
+  :dishes:
+  - :name: Great Gatsby
+    :rating: 6
+  - :name: The Sun Also Rises
+    :rating: 5
+
+- :restaurant: Buzz Bait Taqueria
+  :dishes:
+  - :name: Ahi tuna taco
+    :rating: 5
+  - :name: Mahi mahi taco
+    :rating: 5
+  - :name: Salmon taco
+    :rating: 4
+  - :name: Shrimp taco
+    :rating: 2
+
+- :restaurant: The Vig
+  :dishes:
+  - :name: Brussels sprouts salad
+    :rating: 5
+  - :name: Brisket and eggs
+    :rating: 2
+
+- :restaurant: Beatrix
+  :dishes:
+  - :name: Straight-A salad w chicken
+    :rating: 6
+  - :name: Crispy Kale salad w chicken
+    :rating: 6
+
+- :restaurant: Barcocina
+  :dishes:
+  - :name: Yucca Tots
+    :rating: 5
+  - :name: Lamb Barbacoa Tacos
+    :rating: 5
+  - :name: Mahi mahi tacos
+    :rating: 4
+  - :name: Ahi tuna taquitos
+    :rating: 3
+  - :name: Korean Short Rib Tacos
+    :rating: 3
+
+- :restaurant: Jitlada
+  :dishes:
+  - :name: Paid Thai Noodle
+    :rating: 5
+  - :name: Pad See Iw
+    :rating: 5
+  - :name: Chicken Satay
+    :rating: 4
+  - :name: Tom Kha Soup
+    :rating: 2
+
+- :restaurant: Hutch
+  :dishes:
+  - :name: Black bean burger
+    :rating: 5
+  - :name: Lakeview scrambler
+    :rating: 4
+
+- :restaurant: Lillie's Q
+  :dishes:
+  - :name: Sweet potato fries
+    :rating: 6
+  - :name: Pulled pork
+    :rating: 5
+  - :name: Winter is coming
+    :rating: 5
+  - :name: Mac n cheese
+    :rating: 3
+  - :name: Fried pickles
+    :rating: 3
+  - :name: Southern sweet tea
+    :rating: 2
+
+- :restaurant: Mindy's
+  :dishes:
+  - :name: Chai
+    :rating: 5
+  - :name: Mexican
+    :rating: 4
+  # Climate ❄️
+
+- :restaurant: Longman & Eagle
+  :dishes:
+  - :name: Berkshire Pork Tenderloin
+    :rating: 6
+  - :name: Duck-in-a-jar
+    :rating: 6
+  - :name: Beef Tartare
+    :rating: 5
+  - :name: Bone Marrow
+    :rating: 3
+
+  - :name: Two-tree (drink)
+    :rating: 6
+  - :name: Young at Heart (drink)
+    :rating: 5
+  - :name: Bitter Expectations (drink)
+    :rating: 4
+    # Austin 5
+  - :name: Falling Up (drink)
+    :rating: 4
+  - :name: The Welcome (drink)
+    :rating: 4
+  - :name: Old fashioned (drink)
+    :rating: 4
+  - :name: Bitter bourbon buck (drink)
+    :rating: 4
+    # Austin 3
+  - :name: Zuckerman's (drink)
+    :rating: 3
+
+- :restaurant: Big & Littles
+  :dishes:
+  - :name: Ahi Tuna Taco
+    :rating: 5
+  - :name: Samurai
+    :rating: 4
+  - :name: Spicy Thai Whitefish
+    :rating: 4
+    # Austin 3
+  - :name: Lamb
+    :rating: 4
+  - :name: Truffle Fries
+    :rating: 4
+  - :name: Al Pastor
+    :rating: 3
+  - :name: Japanese Short Rib
+    :rating: 3
+  - :name: little
+    :rating: 3
+
+- :restaurant: Balena
+  :dishes:
+  # Brunch:
+  - :name: Scrambled egg bruschetta
+    :rating: 5
+  - :name: Crispy polenta hash
+    :rating: 5
+  - :name: Bicicletta
+    :rating: 5
+  # To fill in:
+  # Rigatoni with Pork Ragu
+  # Potato Gnocchi
+  # Tagliolini Nero
+  # Sausage Pizza
+  # Lamb Meatballs
+
+- :restaurant: Fuku+
+  :dishes:
+  - :name: Dr Pepper slushie
+    :rating: 6
+  - :name: Mission Chinese food Chicken fingers
+    :rating: 6
+  - :name: Szechuan pork flatbread
+    :rating: 4
+  - :name: Chicken sandwich
+    :rating: 3
+
+- :restaurant: Nookies
+  :dishes:
+  - :name: Southwest salmon sandwich
+    :rating: 4
+  - :name: Greek chicken sandwich
+    :rating: 2
+
+- :restaurant: Corridor Brewery & Provisions
+  :dishes:
+  - :name: Cauliflower buffalo bites
+    :rating: 4
+  - :name: Asparagus salad
+    :rating: 5
+  - :name: Spanish chorizo and date pizza
+    :rating: 4
+  # Beers:
+  - :name: Kathleen Turner Overdrive (drink)
+    :rating: 5
+  - :name: Sober Cannibal (drink)
+    :rating: 2
+  - :name: Blame John Cusack (drink)
+    :rating: 4
+  - :name: Wizard Fight (drink)
+    :rating: 2
+  - :name: Nibble Nibble Little Mouse (drink)
+    :rating: 4
+  - :name: Too Old To Chase Rabbits (drink)
+    :rating: 5
+
+- :restaurant: Presidio
+  :dishes:
+  - :name: Beet Salad
+    :rating: 6
+  - :name: Royale with Cheese
+    :rating: 5
+  # Drinks:
+  - :name: Sweater Weather (drink)
+    :rating: 6
+  - :name: 'Presidio Pisco Punch #1 (drink)'
+    :rating: 6
+
+- :restaurant: Cafe Selmarie
+  :dishes:
+  - :name: Bacon and Leek Flatbread
+    :rating: 4
+    # Austin 3
+  - :name: Brussels sprout salad
+    :rating: 2
+
+- :restaurant: Tortas Frontera
+  :dishes:
+  - :name: Egg & Chorizo
+    :rating: 6
+  - :name: Yogurt, fully loaded
+    :rating: 3
+
+- :restaurant: Kettner Exchange
+  :dishes:
+  - :name: Ricotta Cavatelli
+    :rating: 6
+  - :name: Tuna Pizza
+    :rating: 5
+  - :name: Hamachi Ceviche
+    :rating: 5
+  - :name: Kale Salad
+    :rating: 4
+    # Austin 5
+  # Drinks:
+  - :name: Spicy Gallagher (drink)
+    :rating: 6
+  - :name: St Nick's Kick (drink)
+    :rating: 6
+  - :name: Que Onda (drink)
+    :rating: 5
+  - :name: KEX Painkiller (drink)
+    :rating: 5
+  - :name: Georgia Sunshine (drink)
+    :rating: 4
+
+- :restaurant: Juniper & Ivy
+  :dishes:
+  - :name: Yellowtail Tostadas
+    :rating: 5
+  - :name: Bacon and Fig Newtons
+    :rating: 6
+  - :name: Old Pal (Drink)
+    :rating: 3
+    # Austin 5
+  - :name: White Summer (Drink)
+    :rating: 6
+  - :name: Kick Back (Drink)
+    :rating: 5
+
+- :restaurant: Ironside
+  :dishes:
+  - :name: Jack Ketch
+    :rating: 6
+  - :name: Skubic Diver
+    :rating: 6
+
+- :restaurant: The Kitchen
+  :dishes:
+  - :name: Curry Chicken Salad
+    :rating: 5
+  - :name: Beet Salad w Salmon
+    :rating: 4
+
+- :restaurant: DMK
+  :dishes:
+  - :name: Chorizo Guacamole Burger
+    :rating: 5
+  - :name: Blackhawks Buffalo Burger
+    :rating: 4
+  - :name: Parmesan Truffle Fries
+    :rating: 4
+  - :name: Sweet Potato Fries
+    :rating: 5
+
+- :restaurant: Uncle Julio's
+  :dishes:
+  - :name: El Hefe Margarita
+    :rating: 6
+
+- :restaurant: The Blanchard
+  :dishes:
+  - :name: Foie Gras
+    :rating: 6
+  # - :name: Some sort of steak
+  #   :rating: 5
+  - :name: Duck l'orange
+    :rating: 5
+  - :name: Escargot
+    :rating: 2
+
+- :restaurant: Boka
+  :dishes:
+  - :name: Marinated Hamachi
+    :rating: 4
+  - :name: Heirloom Carrots
+    :rating: 6
+  - :name: Crash of '29 (drink)
+    :rating: 6
+  - :name: Have Mercy (drink)
+    :rating: 5
+
+- :restaurant: Farm Bar
+  :dishes:
+  - :name: Spicy Goat Sausage Poutine
+    :rating: 4
+
+- :restaurant: The Duck Inn
+  :dishes:
+  - :name: Duck confit hash
+    :rating: 6
+  - :name: Chorizo omelette
+    :rating: 5
+    # Austin 6
+  - :name: Cheese Curds
+    :rating: 6
+  - :name: Lei Blonde
+    :rating: 6
+
+- :restaurant: Hampton Social
+  :dishes:
+  - :name: Lobster BLT
+    :rating: 4
+  - :name: Bloody Mary
+    :rating: 3
+  - :name: Pimm's Vacation
+    :rating: 2
+
+- :restaurant: The Broken Shaker
+  :dishes:
+  - :name: Steakhouse Sour
+    :rating: 6
+  - :name: The Texas Politic
+    :rating: 5
+
+- :restaurant: The J Parker
+  :dishes:
+  - :name: The Rapture
+    :rating: 4
+
+- :restaurant: Sink | Swim
+  :dishes:
+  - :name: Monkfish Liver Torchon
+    :rating: 5
+  - :name: Warm Beets
+    :rating: 5
+  - :name: Tuna Bolognese
+    :rating: 4 # b/c undercooked
+  - :name: Mussels and Oxtail
+    :rating: 5
+  - :name: Fish House Punch (drink)
+    :rating: 6
+  - :name: 114 Old Fashioned (drink)
+    :rating: 5
+
+- :restaurant: Scofflaw
+  :dishes:
+  - :name: Old Benoni
+    :rating: 5
+  - :name: Costa Azul
+    :rating: 5
+  - :name: Best Served Cold
+    :rating: 4
+  - :name: Crossbow Enthusiast
+    :rating: 4
+
+- :restaurant: Fish Bar
+  :dishes:
+  - :name: Crab Bisque
+    :rating: 5
+  - :name: Satchmo Po'boy
+    :rating: 6
+  - :name: Blackened Lobster Tacos
+    :rating: 4
+  - :name: Besame (drink)
+    :rating: 4
+
+- :restaurant: Trenchermen
+  :dishes:
+  - :name: Breakfast Burger
+    :rating: 6
+  - :name: Fried Chicken Sandwich
+    :rating: 6
+  - :name: Avocado & Beet Toast
+    :rating: 5
+    # Austin 6
+  - :name: Beermosa
+    :rating: 3
+
+- :restaurant: Las Tablas
+  :dishes:
+  - :name: Picada Colombiana para dos
+    :rating: 5
+  - :name: Entrana skirt steak
+    :rating: 5
+  - :name: Sweet Plantain
+    :rating: 6
+
+- :restaurant: Snaggletooth
+  :dishes:
+  - :name: Cold-Smoked Trout Dip
+    :rating: 4
+  - :name: Trout Benedict
+    :rating: 5
+  - :name: Pastrami Trout Tartine
+    :rating: 4
+    # Austin 6
+
+- :restaurant: Que Rico
+  :dishes:
+  - :name: Steak and Chicken Fajitas
+    :rating: 5
+  - :name: Pork Mole
+    :rating: 4
+  - :name: Guacamole
+    :rating: 4
+  - :name: Margaritas Bomber
+    :rating: 5
+
+- :restaurant: Perennial Virant
+  :dishes:
+  - :name: Omelette
+    :rating: 5
+  - :name: Biscuits and Gravy
+    :rating: 3
+
+- :restaurant: Duck Duck Goat
+  :dishes:
+  - :name: Shrimp Toast
+    :rating: 4
+  - :name: Crab Rangoon
+    :rating: 6
+  - :name: Fermented Vegetables
+    :rating: 3
+  - :name: Slap Noodles with Shrimp
+    :rating: 5
+  - :name: Frog Legs
+    :rating: 2
+    # Austin 3
+  - :name: Duck Fried Rice
+    :rating: 5
+  - :name: Chongqing Chicken
+    :rating: 5
+
+  - :name: Not Your Fortune Cookie (drink)
+    :rating: 6
+    # Austin 5
+  - :name: Table Tennis (drink)
+    :rating: 5
+  - :name: Tiger Dog (drink)
+    :rating: 4
+  # Paper Money -- try!

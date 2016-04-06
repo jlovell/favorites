@@ -1,6 +1,9 @@
-%h2{ style: "display: inline-block;" }= @restaurant[:name]
-= link_to new_dish_path(restaurant_id: @restaurant[:id]), class: "btn btn-primary btn-fab pull-right" do
-  .material-icons add
+.aligned-row
+  .restaurant-name{ style: "flex: 4" }
+    %h2{ style: "display: inline-block;" }= @restaurant[:name]
+  .add-button{ style: "flex: 1; align-self: center;" }
+    = link_to new_dish_path(restaurant_id: @restaurant[:id]), class: "btn btn-fab btn-fab-mini btn-info pull-right" do
+      %i.material-icons add
 %table.table.table-striped.table-hover
   %thead
     %tr
@@ -11,3 +14,19 @@
       %tr
         %td= dish[:name]
         %td= EmojiHelper.image_for_rating dish[:rating]
+
+:css
+  .aligned-row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display:         flex;
+    align-items: center;
+  }
+  .add-button {
+    flex: 1;
+    align-self: center;
+    -webkit-align-self: center;
+  }
+

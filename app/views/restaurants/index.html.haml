@@ -1,8 +1,17 @@
-.list-group
+.list-group#restaurants-filtered
   - @restaurants.each do |restaurant|
-    = link_to restaurant_path(restaurant[:id]), class: "list-group-item", style: "" do
-      .row-content
-        .list-group-item-heading= restaurant[:name]
-        .list-group-item-text= restaurant[:address]
-        %span.badge.action-secondary= restaurant[:dish_count]
-    .list-group-separator
+    .filter-row
+      = link_to restaurant_path(restaurant[:id]), class: "list-group-item", style: "" do
+        .row-content
+          .list-group-item-heading.filter-on= restaurant[:name]
+          .list-group-item-text= restaurant[:address]
+          %span.badge.action-secondary= restaurant[:dish_count]
+      .list-group-separator
+  = form_for :restaurant, url: restaurants_path, html: { id: "add-new-place" } do |f|
+    = f.hidden_field :name, class: "name-field"
+    %button#add-new-place.btn.btn-raised.btn-info.btn-block
+      Add
+      %span.name-field
+      !
+
+

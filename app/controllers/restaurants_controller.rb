@@ -14,4 +14,15 @@ class RestaurantsController < ApplicationController
       { name: dish.name, rating: dish.ratings.first.value }
     end
   end
+
+  def create
+    r = Restaurant.create(restaurant_params)
+    redirect_to restaurant_path(r)
+  end
+
+  private
+
+  def restaurant_params
+    params.require(:restaurant).permit(:name)
+  end
 end

@@ -12,7 +12,9 @@
  *
  *= require_tree .
  *= require_self
- * require material.css
+ *= require bootstrap.min.css
+ *= require bootstrap-material-design.css
+ *= require ripples
  */
 
-.container { margin-top: 10px;}
+.container { margin-top: 10px; }

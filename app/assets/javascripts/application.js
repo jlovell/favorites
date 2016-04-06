@@ -13,5 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-// require material.min
+//= require fastclick
+//= require bootstrap.min
+//= require material
+//= require ripples
 //= require_tree .

@@ -1,8 +1,10 @@
 class RestaurantsController < ApplicationController
   def index
-    @restaurants = Restaurant.all.map do |r|
-      r.attributes.slice(*%w(id name created_at)).symbolize_keys
-        .merge(dish_count: r.dishes.count)
+    @restaurants = Restaurant.includes(:address).all.map do |r|
+      data = r.attributes.slice(*%w(id name created_at)).symbolize_keys
+      data.merge!(dish_count: r.dishes.count)
+      data.merge!(address: r.formatted_address)
+      data
     end
   end
 

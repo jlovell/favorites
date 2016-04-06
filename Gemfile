@@ -15,9 +15,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'haml'
 
-gem 'gemoji'
-
 gem 'rails_12factor', group: :production
+
+gem 'gemoji'
+gem 'google_places'
+gem 'awesome_print'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

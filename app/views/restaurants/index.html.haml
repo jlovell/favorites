@@ -3,6 +3,6 @@
     = link_to restaurant_path(restaurant[:id]), class: "list-group-item", style: "" do
       .row-content
         .list-group-item-heading= restaurant[:name]
-        .list-group-item-text 334 W Fulton Market
+        .list-group-item-text= restaurant[:address]
         %span.badge.action-secondary= restaurant[:dish_count]
     .list-group-separator

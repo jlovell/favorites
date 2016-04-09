@@ -1,3 +1,7 @@
+- if current_user
+  Logged in as #{current_user.name} (#{current_user.email}) [#{current_user.id}]!
+- else
+  = link_to "Log in!", "auth/google_oauth2"
 .list-group#restaurants-filtered
   - @restaurants.each do |restaurant|
     .filter-row

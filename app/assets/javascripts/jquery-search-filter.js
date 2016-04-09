@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('ready page:load', function () {
     $("#search-filter").keyup(function () {
         console.log("up!");
         //split the current value of searchInput

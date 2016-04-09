@@ -1,11 +1,13 @@
 class RestaurantsController < ApplicationController
   def index
-    @restaurants = Restaurant.includes(:address).all.map do |r|
-      data = r.attributes.slice(*%w(id name created_at)).symbolize_keys
-      data.merge!(dish_count: r.dishes.count)
-      data.merge!(address: r.formatted_address)
-      data
-    end
+    # FIXME this query -- single SQL call but ugly
+    @restaurants = Restaurant.joins(:dishes).joins(:address)
+      .group('restaurants.id, addresses.id')
+      .select(:id,
+              :name,
+              :created_at,
+              'count(dishes.id) as dish_count',
+              "concat_ws(', ', addresses.address_1, addresses.city) as address")
   end
 
   def show

@@ -2,7 +2,8 @@
   .container-fluid
     .navbar-header
       %a.navbar-brand{:href => "javascript:window.history.go(-1);"}
-        %i.material-icons keyboard_arrow_left
+        %i.material-icons
+          = yield(:navicon).presence || "keyboard_arrow_left"
       %a.navbar-brand{:href => root_path } Favorites!
       - if params[:action] == "index"
         %form.navbar-form.navbar-brand.navbar-right.pull-right{ style: "margin: 0;"}

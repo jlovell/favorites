@@ -12,6 +12,13 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
+    flash[:info] = "Successfully logged out"
+    redirect_to root_path
+  end
+
+  def failure
+    session[:user_id] = nil
+    flash[:info] = "There was an error while trying to authenticate you..."
     redirect_to root_path
   end
 end

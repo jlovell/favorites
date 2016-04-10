@@ -1,19 +1,39 @@
 .aligned-row
-  .restaurant-name{ style: "flex: 4" }
+  .restaurant-name{ style: "flex: 4; -webkit-flex: 4;" }
     %h2{ style: "display: inline-block;" }= @restaurant[:name]
-  .add-button{ style: "flex: 1; align-self: center;" }
-    = link_to new_dish_path(restaurant_id: @restaurant[:id]), class: "btn btn-fab btn-fab-mini btn-info pull-right" do
-      %i.material-icons add
-%table.table.table-striped.table-hover
-  %thead
-    %tr
-      %th Dish
-      %th Rating
-  %tbody
-    - @dishes.each do |dish|
-      %tr
-        %td= dish[:name]
-        %td= EmojiHelper.image_for_rating dish[:rating]
+  - if current_user
+    .add-button
+      = link_to new_dish_path(restaurant_id: @restaurant[:id]), class: "btn btn-fab btn-fab-mini btn-info pull-right" do
+        %i.material-icons add
+
+.spacer
+
+- if @your_dishes.present?
+  %h5 You
+  %table.table.table-striped.table-hover
+    %tbody
+      - @your_dishes.each do |dish|
+        %tr
+          %td= dish[:name]
+          %td= EmojiHelper.image_for_rating dish[:rating]
+- elsif !current_user
+  = link_to "Log in here", google_sign_in_path
+  to start adding your own ratings!
+- else
+  You haven't rated anything here! Go ahead and add something using the button above.
+
+.spacer
+
+- if @all_dishes.present?
+  %h5 Everybody else
+  %table.table.table-striped.table-hover
+    %tbody
+      - @all_dishes.each do |dish|
+        %tr
+          %td= dish[:name]
+          %td= EmojiHelper.image_for_rating dish[:rating]
+- else
+  No one else has rated things here!
 
 :css
   .aligned-row {
@@ -26,7 +46,12 @@
   }
   .add-button {
     flex: 1;
+    -webkit-flex: 1;
     align-self: center;
     -webkit-align-self: center;
+  }
+  .spacer {
+    width: 100%;
+    height: 20px;
   }
 

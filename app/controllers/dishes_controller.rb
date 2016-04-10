@@ -7,9 +7,11 @@ class DishesController < ApplicationController
 
   def create
     # todo validation errors
-    dish = Dish.create!(dish_params)
-    raise unless dish.ratings.first.value
-    redirect_to restaurant_path(dish.category)
+    Rating.for_user(current_user).scoping do
+      @dish = Dish.create!(dish_params)
+    end
+    raise unless @dish.ratings.first.value
+    redirect_to restaurant_path(@dish.category)
   end
 
   private

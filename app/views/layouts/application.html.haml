@@ -18,9 +18,7 @@
     = render 'shared/ios_native_status_bar'
     = render 'shared/navbar'
     .container
-      - if current_user
-        Logged in as #{current_user.name} (#{current_user.email}) [#{current_user.id}]!
-      - else
-        = link_to "Log in!", "auth/google_oauth2"
+      - flash.each do |type, message|
+        .alert{ class: "alert-#{type}" }= message
 
       = yield

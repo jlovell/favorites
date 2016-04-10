@@ -12,8 +12,13 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find(params[:id])
-    @dishes = @restaurant.dishes.includes(:ratings).map do |dish|
-      { name: dish.name, rating: dish.ratings.first.value }
+    if current_user
+      @your_dishes = Rating.for_restaurant(@restaurant).for_user(current_user).map do |rating|
+        { name: rating.dish.name, rating: rating.value }
+      end
+    end
+    @all_dishes = Rating.for_restaurant(@restaurant).not_for_user(current_user).map do |rating|
+      { name: rating.dish.name, rating: rating.value }
     end
   end
 

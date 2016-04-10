@@ -9,11 +9,11 @@
           .list-group-item-text= restaurant[:address]
           %span.badge.action-secondary= restaurant[:dish_count]
       .list-group-separator
-  = form_for :restaurant, url: restaurants_path, html: { id: "add-new-place" } do |f|
-    = f.hidden_field :name, class: "name-field"
-    %button#add-new-place.btn.btn-raised.btn-info.btn-block
-      Add
-      %span.name-field
-      !
+= form_for :restaurant, url: restaurants_path, html: { id: "add-new-place" } do |f|
+  = f.hidden_field :name, class: "name-field"
+  %button#add-new-place.btn.btn-raised.btn-info.btn-block
+    Add
+    %span.name-field
+    !
 
 

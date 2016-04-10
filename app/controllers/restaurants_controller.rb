@@ -1,13 +1,8 @@
 class RestaurantsController < ApplicationController
   def index
-    # FIXME this query -- single SQL call but ugly
-    @restaurants = Restaurant.joins(:dishes).joins(:address)
-      .group('restaurants.id, addresses.id')
-      .select(:id,
-              :name,
-              :created_at,
-              'count(dishes.id) as dish_count',
-              "concat_ws(', ', addresses.address_1, addresses.city) as address")
+    @restaurants = Restaurant.with_dish_count.includes(:address).map do |r|
+      r.attributes.symbolize_keys!.merge(address: r.formatted_address)
+    end
   end
 
   def show
@@ -23,8 +18,13 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    r = Restaurant.create(restaurant_params)
-    redirect_to restaurant_path(r)
+    if (r = Restaurant.create(restaurant_params))
+      redirect_to restaurant_path(r)
+      flash[:success] = "Successfully created #{r.name}"
+    else
+      flash[:error] = "There was an error creating the new restaurant"
+      redirect_to root_path
+    end
   end
 
   private

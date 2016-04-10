@@ -5,6 +5,11 @@
     .add-button
       = link_to new_dish_path(restaurant_id: @restaurant[:id]), class: "btn btn-fab btn-fab-mini btn-info pull-right" do
         %i.material-icons add
+%p
+  - if @restaurant.address
+    = @restaurant.formatted_address
+  - else
+    = render 'fetch_address_form'
 
 .spacer
 

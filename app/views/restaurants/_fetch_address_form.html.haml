@@ -1,0 +1,26 @@
+#fetch-address-form
+  #fetch-step-1
+    Fetch address from Google
+  #fetch-step-2{ style: "display: none; "}
+    What city?
+    %button.btn.btn-sm.btn-raised.btn-info.city Chicago
+    %button.btn.btn-sm.btn-raised.btn-info.city New York
+
+
+:javascript
+  $fetch_step_1 = $('#fetch-step-1')
+  $fetch_step_2 = $('#fetch-step-2')
+
+  $fetch_step_1.on('click', function() {
+    $fetch_step_1.hide();
+    $fetch_step_2.show();
+  })
+
+  $('#fetch-step-2 button.city').on('click', function() {
+    $('#fetch-address-form').load('#{fetch_address_path}',
+      {
+        restaurant_id: '#{@restaurant.id}',
+        city: $(this).text()
+      }
+    )
+  })

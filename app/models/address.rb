@@ -1,6 +1,10 @@
 class Address < ActiveRecord::Base
   belongs_to :restaurant
 
+  def self.create_from_full(full_address, options)
+    create(parts_from_full(full_address).merge(options))
+  end
+
   def self.parts_from_full(full_address)
     m = full_address.match(
       /(?<address_1>[^,]+), (?<city>[^,]+), (?<state>\w{2}) ?(?<zip>[\d\-]+)?/i

@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create, :destroy] do
     get :failure, on: :collection
   end
+
+  post 'addresses/fetch', to: 'addresses#fetch', as: 'fetch_address'
 end

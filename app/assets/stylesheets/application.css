@@ -15,6 +15,7 @@
  *= require bootstrap.min.css
  *= require bootstrap-material-design.css
  *= require ripples
+ *= require snackbar/snackbar.min
  */
 
 .container { margin-top: 10px; }

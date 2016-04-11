@@ -14,11 +14,22 @@
     height: 20px;
     display: none;
   }
+  .snackbar-content, .snackbar-content > * {
+    max-width: 100%;
+  }
 
 :javascript
   $(document).on('ready page:load', function () {
     if (window.navigator.standalone) {
       $("#ios-native-bar").show();
       $("#ios-native-bar-placeholder").show();
+    } else if (navigator.platform.indexOf("iPhone") != -1) {
+      $.snackbar({
+        content: "To use Favorites like a normal app, tap the share button below (in the middle, with the up arrow), and tap 'Add To Home Screen'",
+        timeout: 30000
+      })
     }
   })
+  $("#ios-native-bar").click(function() {
+    $("html, body").animate({ scrollTop: 0 });
+  });

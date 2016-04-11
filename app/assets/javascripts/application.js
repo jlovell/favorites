@@ -17,4 +17,5 @@
 //= require bootstrap.min
 //= require material
 //= require ripples
+//= require snackbar/snackbar.min
 //= require_tree .

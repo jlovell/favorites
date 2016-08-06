@@ -22,7 +22,7 @@
           %td= dish[:name]
           %td= EmojiHelper.image_for_rating dish[:rating]
 - elsif !current_user
-  = link_to "Log in here", google_sign_in_path
+  = link_to "Log in here", new_session_path
   to start adding your own ratings!
 - else
   You haven't rated anything here! Go ahead and add something using the button above.

@@ -18,17 +18,17 @@ RSpec.describe 'authentication flow' do
     after { OmniAuth.config.mock_auth[:google_oauth2] = nil }
 
     it 'creates a new user upon a new sign in' do
-      expect { visit google_sign_in_path }.to change { User.count }.by 1
+      expect { visit new_session_path }.to change { User.count }.by 1
     end
 
     it 'signs in as the same user on subsequent logins' do
-      visit google_sign_in_path
+      visit new_session_path
       expect(page).to have_content "Welcome, Donald"
 
       visit sign_out_path
       expect(page).to have_content "logged out"
 
-      expect { visit google_sign_in_path }.not_to change { User.count }
+      expect { visit new_session_path }.not_to change { User.count }
     end
   end
 
@@ -43,7 +43,7 @@ RSpec.describe 'authentication flow' do
     after { OmniAuth.config.mock_auth[:google_oauth2] = nil }
 
     it 'creates a new user upon a new sign in' do
-      expect { visit google_sign_in_path }.not_to change { User.count }
+      expect { visit new_session_path }.not_to change { User.count }
       expect(page).to have_content "There was an error"
     end
 

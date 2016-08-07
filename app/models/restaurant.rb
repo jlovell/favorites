@@ -7,7 +7,9 @@ class Restaurant < ActiveRecord::Base
 
   scope :with_dish_count, -> {
     left_join_dishes.group(:id)
-      .select('restaurants.*, count(dishes.id) as dish_count')
+      .select('restaurants.*',
+        'count(dishes.id) as dish_count')
+      .order('dish_count desc')
   }
 
   scope :left_join_dishes, -> {

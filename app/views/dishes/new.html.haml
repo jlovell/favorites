@@ -5,49 +5,57 @@
   = f.hidden_field :category_id
   = f.hidden_field :category_type
   .form-group
-    %input#dish_name.form-control{:placeholder => "Dish Name", :name => "dish[name]"}
+    %input#dish_name.form-control{ placeholder: "Dish Name", name: "dish[name]" }
   .form-group
     = f.fields_for :ratings do |ff|
       .flex-grid
         .flex-grid-cell
           %label.emoji-labels
-            = ff.radio_button :value, "1"
-            %span= EmojiHelper.image_for_rating 1
+            = ff.radio_button :value, '1', onchange: 'update_checked(this)'
+            %div= EmojiHelper.image_for_rating 1
         .flex-grid-cell
           %label.emoji-labels
-            = ff.radio_button :value, "2"
-            %span= EmojiHelper.image_for_rating 2
+            = ff.radio_button :value, '2', onchange: 'update_checked(this)'
+            %div= EmojiHelper.image_for_rating 2
         .flex-grid-cell
           %label.emoji-labels
-            = ff.radio_button :value, "3"
-            %span= EmojiHelper.image_for_rating 3
+            = ff.radio_button :value, '3', onchange: 'update_checked(this)'
+            %div= EmojiHelper.image_for_rating 3
         .flex-grid-cell
           %label.emoji-labels
-            = ff.radio_button :value, "4"
-            %span= EmojiHelper.image_for_rating 4
+            = ff.radio_button :value, '4', onchange: 'update_checked(this)'
+            %div= EmojiHelper.image_for_rating 4
         .flex-grid-cell
           %label.emoji-labels
-            = ff.radio_button :value, "5"
-            %span= EmojiHelper.image_for_rating 5
+            = ff.radio_button :value, '5', onchange: 'update_checked(this)'
+            %div= EmojiHelper.image_for_rating 5
         .flex-grid-cell
           %label.emoji-labels
-            = ff.radio_button :value, "6"
-            %span= EmojiHelper.image_for_rating 6
+            = ff.radio_button :value, '6', onchange: 'update_checked(this)'
+            %div= EmojiHelper.image_for_rating 6
   = f.submit "Submit", class: "btn btn-raised btn-primary btn-block"
 
 :css
   .flex-grid {
     text-align: center;
+    height: 60px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
   }
-  .flex-grid-cell { flex: 1 }
+  .flex-grid-cell { flex: 1; }
   .emoji-labels input[type=radio] {
-    visibility: hidden;
+    display: none;
   }
-  .emoji-labels input[type=radio]:checked + span {
-    border-bottom: 2px solid red;
+  .grayscale {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
+:javascript
+  function update_checked(cb) {
+    $('.emoji-labels').addClass('grayscale');
+    $(cb).parent().removeClass('grayscale');
   }

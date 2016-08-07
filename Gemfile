@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml'
 
 gem 'omniauth-google-oauth2'
+gem 'bcrypt'
 
 gem 'rails_12factor', group: :production
 
